@@ -245,6 +245,7 @@ body {
 
 .category p {
     margin-bottom: 20px;
+    z-index: 26;
 }
 
 .images {
@@ -311,25 +312,79 @@ body {
     height: 180px;
 }
 
-.images img:nth-child(1) {
-    z-index: 15;
-    transform: translateY(0);
+.imgcap1 img {
+    z-index: 7;
 }
 
-.images img:nth-child(2) {
+.imgcap2 img {
     z-index: 6;
-    transform: translateY(50px);
+    margin-top: 50px;
+    height: 180px;
 }
 
-.images img:nth-child(3) {
+.imgcap3 img {
     z-index: 5;
-    transform: translateY(100px);
+    margin-top: 100px;
+    height: 180px;
 }
 
-.images img:hover {
-    z-index: 25;
-    scale: 1.2;
+.imgcap3 {
+    z-index: 5;
 }
+
+.imgcap1 img:hover {
+    z-index: 8;
+    transform: scale(1.2);
+
+}
+
+.imgcap2 img:hover {
+    z-index: 8;
+    transform: scale(1.2);
+
+}
+
+.imgcap3 img:hover {
+    z-index: 8;
+    transform: scale(1.2);
+
+}
+
+.imgcap1 p
+{
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 150px;
+    z-index: 8;
+    color: #ffffff;
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+}
+.imgcap2 p
+{
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 200px;
+    z-index: 9;
+    color: #ffffff;
+}
+.imgcap3 p
+{
+    position: absolute;
+    padding-left: 10px;
+    padding-top: 250px;
+    z-index: 10;
+    color: #ffffff;
+}
+
+.imgcap3:hover ~ .imgcap2 p {
+    z-index: 1; 
+    color: #00d9ff; /* Change color on hover */
+}
+
+
+
+
 
 /* #endregion Categories */
 
@@ -403,7 +458,7 @@ body {
 
 .blog-grid {
     display: flex;
-    justify-content: ce;
+    justify-content: center;
     flex-wrap: wrap; 
 }
 
